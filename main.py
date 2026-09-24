@@ -115,9 +115,15 @@ async def extract_get(url: Optional[str] = Query(None, description="Instagram UR
     if not url:
         return {
             "status": "online",
+            "owner": "@MOH_MAYA_OFFICIAL",
             "usage": "https://instadownload-gamma.vercel.app/api?url=YOUR_INSTAGRAM_LINK",
-            "features": ["Video (MP4)", "Separate Pure Audio (M4A/MP3)", "Thumbnail"],
-            "docs": "/docs"
+            "features": [
+                "Video (MP4)",
+                "Separate Pure Audio (M4A/MP3)",
+                "Thumbnail"
+            ],
+            "docs": "/docs",
+            "credit": "API OWNER @MOH_MAYA_OFFICIAL"
         }
 
     loop = asyncio.get_event_loop()
